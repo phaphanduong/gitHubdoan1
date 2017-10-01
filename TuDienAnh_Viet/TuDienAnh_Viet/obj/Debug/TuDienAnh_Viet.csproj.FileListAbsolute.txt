@@ -1,0 +1,13 @@
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\TuDienAnh_Viet\TuDienAnh_Viet\bin\Debug\TuDienAnh_Viet.exe.config
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\TuDienAnh_Viet\TuDienAnh_Viet\bin\Debug\TuDienAnh_Viet.exe
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\TuDienAnh_Viet\TuDienAnh_Viet\bin\Debug\TuDienAnh_Viet.pdb
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\TuDienAnh_Viet\TuDienAnh_Viet\obj\Debug\TuDienAnh_Viet.csprojResolveAssemblyReference.cache
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\TuDienAnh_Viet\TuDienAnh_Viet\obj\Debug\TuDienAnh_Viet.Form1.resources
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\TuDienAnh_Viet\TuDienAnh_Viet\obj\Debug\TuDienAnh_Viet.Properties.Resources.resources
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\TuDienAnh_Viet\TuDienAnh_Viet\obj\Debug\TuDienAnh_Viet.csproj.GenerateResource.Cache
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\TuDienAnh_Viet\TuDienAnh_Viet\obj\Debug\TuDienAnh_Viet.csproj.CoreCompileInputs.cache
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\TuDienAnh_Viet\TuDienAnh_Viet\obj\Debug\TuDienAnh_Viet.exe
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\TuDienAnh_Viet\TuDienAnh_Viet\obj\Debug\TuDienAnh_Viet.pdb
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\TuDienAnh_Viet\TuDienAnh_Viet\obj\Debug\Interop.SpeechLib.dll
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\TuDienAnh_Viet\TuDienAnh_Viet\obj\Debug\TuDienAnh_Viet.csproj.ResolveComReference.cache
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\TuDienAnh_Viet\TuDienAnh_Viet\obj\Debug\TuDienAnh_Viet.fmain.resources
