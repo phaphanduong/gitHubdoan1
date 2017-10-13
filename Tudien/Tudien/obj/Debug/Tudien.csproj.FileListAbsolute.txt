@@ -1,0 +1,10 @@
+D:\Tudien\Tudien\bin\Debug\Tudien.exe.config
+D:\Tudien\Tudien\bin\Debug\Tudien.exe
+D:\Tudien\Tudien\bin\Debug\Tudien.pdb
+D:\Tudien\Tudien\obj\Debug\Tudien.csprojResolveAssemblyReference.cache
+D:\Tudien\Tudien\obj\Debug\Tudien.Form1.resources
+D:\Tudien\Tudien\obj\Debug\Tudien.Properties.Resources.resources
+D:\Tudien\Tudien\obj\Debug\Tudien.csproj.GenerateResource.Cache
+D:\Tudien\Tudien\obj\Debug\Tudien.csproj.CoreCompileInputs.cache
+D:\Tudien\Tudien\obj\Debug\Tudien.exe
+D:\Tudien\Tudien\obj\Debug\Tudien.pdb
