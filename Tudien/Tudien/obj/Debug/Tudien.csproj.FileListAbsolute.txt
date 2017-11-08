@@ -19,3 +19,6 @@ C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\Tudien\Tudien\obj\Deb
 C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\Tudien\Tudien\obj\Debug\Tudien.csproj.CoreCompileInputs.cache
 C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\Tudien\Tudien\obj\Debug\Tudien.exe
 C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\Tudien\Tudien\obj\Debug\Tudien.pdb
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\Tudien\Tudien\bin\Debug\Sqlhelper.dll
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\Tudien\Tudien\obj\Debug\Interop.SpeechLib.dll
+C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\Tudien\Tudien\obj\Debug\Tudien.csproj.ResolveComReference.cache

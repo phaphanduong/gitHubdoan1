@@ -30,20 +30,19 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.tbtratu = new System.Windows.Forms.TextBox();
-            this.bttratu = new System.Windows.Forms.Button();
+            this.btntratu = new System.Windows.Forms.Button();
             this.rdanhviet = new System.Windows.Forms.RadioButton();
             this.rdvietanh = new System.Windows.Forms.RadioButton();
-            this.listBoxTu = new System.Windows.Forms.ListBox();
-            this.listBoxNghia = new System.Windows.Forms.ListBox();
-            this.tbthemtuvung = new System.Windows.Forms.Button();
-            this.bnghe = new System.Windows.Forms.Button();
+            this.btnthemtuvung = new System.Windows.Forms.Button();
+            this.btnnghe = new System.Windows.Forms.Button();
+            this.dgvTD = new System.Windows.Forms.DataGridView();
+            this.Tu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTD)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -60,44 +59,24 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem5});
+            this.toolStripMenuExit});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(50, 20);
             this.toolStripMenuItem1.Text = "Menu";
             // 
-            // toolStripMenuItem2
+            // toolStripMenuExit
             // 
-            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem4});
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(114, 22);
-            this.toolStripMenuItem2.Text = "Từ điển";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(121, 22);
-            this.toolStripMenuItem3.Text = "Anh-Việt";
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(121, 22);
-            this.toolStripMenuItem4.Text = "Việt-Anh";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(114, 22);
-            this.toolStripMenuItem5.Text = "Thoát";
+            this.toolStripMenuExit.Name = "toolStripMenuExit";
+            this.toolStripMenuExit.Size = new System.Drawing.Size(105, 22);
+            this.toolStripMenuExit.Text = "Thoát";
+            this.toolStripMenuExit.Click += new System.EventHandler(this.toolStripMenuExit_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(100, 20);
             this.toolStripMenuItem6.Text = "Quản lý từ điển";
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
             // tbtratu
             // 
@@ -107,17 +86,18 @@
             this.tbtratu.Size = new System.Drawing.Size(238, 23);
             this.tbtratu.TabIndex = 15;
             // 
-            // bttratu
+            // btntratu
             // 
-            this.bttratu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.bttratu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttratu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bttratu.Location = new System.Drawing.Point(281, 39);
-            this.bttratu.Name = "bttratu";
-            this.bttratu.Size = new System.Drawing.Size(73, 32);
-            this.bttratu.TabIndex = 19;
-            this.bttratu.Text = "Tra từ";
-            this.bttratu.UseVisualStyleBackColor = false;
+            this.btntratu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btntratu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntratu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btntratu.Location = new System.Drawing.Point(281, 39);
+            this.btntratu.Name = "btntratu";
+            this.btntratu.Size = new System.Drawing.Size(73, 32);
+            this.btntratu.TabIndex = 19;
+            this.btntratu.Text = "Tra từ";
+            this.btntratu.UseVisualStyleBackColor = false;
+            this.btntratu.Click += new System.EventHandler(this.btntratu_Click);
             // 
             // rdanhviet
             // 
@@ -132,6 +112,7 @@
             this.rdanhviet.TabStop = true;
             this.rdanhviet.Text = "Anh - Việt";
             this.rdanhviet.UseVisualStyleBackColor = true;
+            this.rdanhviet.Click += new System.EventHandler(this.rdanhviet_Click);
             // 
             // rdvietanh
             // 
@@ -144,50 +125,62 @@
             this.rdvietanh.TabIndex = 23;
             this.rdvietanh.Text = "Việt - Anh";
             this.rdvietanh.UseVisualStyleBackColor = true;
+            this.rdvietanh.Click += new System.EventHandler(this.rdvietanh_Click);
             // 
-            // listBoxTu
+            // btnthemtuvung
             // 
-            this.listBoxTu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxTu.FormattingEnabled = true;
-            this.listBoxTu.ItemHeight = 16;
-            this.listBoxTu.Location = new System.Drawing.Point(12, 132);
-            this.listBoxTu.Name = "listBoxTu";
-            this.listBoxTu.Size = new System.Drawing.Size(238, 228);
-            this.listBoxTu.TabIndex = 24;
+            this.btnthemtuvung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnthemtuvung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnthemtuvung.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnthemtuvung.Location = new System.Drawing.Point(475, 39);
+            this.btnthemtuvung.Name = "btnthemtuvung";
+            this.btnthemtuvung.Size = new System.Drawing.Size(124, 32);
+            this.btnthemtuvung.TabIndex = 26;
+            this.btnthemtuvung.Text = "Thêm từ vựng";
+            this.btnthemtuvung.UseVisualStyleBackColor = false;
+            this.btnthemtuvung.Click += new System.EventHandler(this.btnthemtuvung_Click);
             // 
-            // listBoxNghia
+            // btnnghe
             // 
-            this.listBoxNghia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxNghia.FormattingEnabled = true;
-            this.listBoxNghia.ItemHeight = 16;
-            this.listBoxNghia.Location = new System.Drawing.Point(341, 132);
-            this.listBoxNghia.Name = "listBoxNghia";
-            this.listBoxNghia.Size = new System.Drawing.Size(258, 228);
-            this.listBoxNghia.TabIndex = 25;
+            this.btnnghe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnnghe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnghe.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnnghe.Location = new System.Drawing.Point(377, 39);
+            this.btnnghe.Name = "btnnghe";
+            this.btnnghe.Size = new System.Drawing.Size(75, 32);
+            this.btnnghe.TabIndex = 32;
+            this.btnnghe.Text = "Nghe";
+            this.btnnghe.UseVisualStyleBackColor = false;
+            this.btnnghe.Click += new System.EventHandler(this.btnnghe_Click);
             // 
-            // tbthemtuvung
+            // dgvTD
             // 
-            this.tbthemtuvung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.tbthemtuvung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbthemtuvung.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbthemtuvung.Location = new System.Drawing.Point(475, 39);
-            this.tbthemtuvung.Name = "tbthemtuvung";
-            this.tbthemtuvung.Size = new System.Drawing.Size(124, 32);
-            this.tbthemtuvung.TabIndex = 26;
-            this.tbthemtuvung.Text = "Thêm từ vựng";
-            this.tbthemtuvung.UseVisualStyleBackColor = false;
+            this.dgvTD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Tu});
+            this.dgvTD.Location = new System.Drawing.Point(13, 132);
+            this.dgvTD.Name = "dgvTD";
+            this.dgvTD.Size = new System.Drawing.Size(237, 228);
+            this.dgvTD.TabIndex = 33;
+            this.dgvTD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTD_CellClick);
             // 
-            // bnghe
+            // Tu
             // 
-            this.bnghe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.bnghe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnghe.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bnghe.Location = new System.Drawing.Point(377, 39);
-            this.bnghe.Name = "bnghe";
-            this.bnghe.Size = new System.Drawing.Size(75, 32);
-            this.bnghe.TabIndex = 32;
-            this.bnghe.Text = "Nghe";
-            this.bnghe.UseVisualStyleBackColor = false;
+            this.Tu.DataPropertyName = "Tu";
+            this.Tu.FillWeight = 200F;
+            this.Tu.HeaderText = "Từ";
+            this.Tu.Name = "Tu";
+            this.Tu.Width = 200;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(345, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Nghĩa của từ";
             // 
             // fmain
             // 
@@ -195,21 +188,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(618, 382);
-            this.Controls.Add(this.bnghe);
-            this.Controls.Add(this.tbthemtuvung);
-            this.Controls.Add(this.listBoxNghia);
-            this.Controls.Add(this.listBoxTu);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvTD);
+            this.Controls.Add(this.btnnghe);
+            this.Controls.Add(this.btnthemtuvung);
             this.Controls.Add(this.rdvietanh);
             this.Controls.Add(this.rdanhviet);
-            this.Controls.Add(this.bttratu);
+            this.Controls.Add(this.btntratu);
             this.Controls.Add(this.tbtratu);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "fmain";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.fmain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,19 +214,17 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuExit;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.TextBox tbtratu;
-        private System.Windows.Forms.Button bttratu;
+        private System.Windows.Forms.Button btntratu;
         private System.Windows.Forms.RadioButton rdanhviet;
         private System.Windows.Forms.RadioButton rdvietanh;
-        private System.Windows.Forms.ListBox listBoxTu;
-        private System.Windows.Forms.ListBox listBoxNghia;
-        private System.Windows.Forms.Button tbthemtuvung;
-        private System.Windows.Forms.Button bnghe;
+        private System.Windows.Forms.Button btnthemtuvung;
+        private System.Windows.Forms.Button btnnghe;
+        private System.Windows.Forms.DataGridView dgvTD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tu;
+        private System.Windows.Forms.Label label1;
     }
 }
 
