@@ -33,14 +33,14 @@
             this.toolStripMenuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.tbtratu = new System.Windows.Forms.TextBox();
-            this.btntratu = new System.Windows.Forms.Button();
             this.rdanhviet = new System.Windows.Forms.RadioButton();
             this.rdvietanh = new System.Windows.Forms.RadioButton();
-            this.btnthemtuvung = new System.Windows.Forms.Button();
-            this.btnnghe = new System.Windows.Forms.Button();
             this.dgvTD = new System.Windows.Forms.DataGridView();
             this.Tu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.btntratu = new System.Windows.Forms.Button();
+            this.btnnghe = new System.Windows.Forms.Button();
+            this.btnthemtuvung = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTD)).BeginInit();
             this.SuspendLayout();
@@ -85,19 +85,7 @@
             this.tbtratu.Name = "tbtratu";
             this.tbtratu.Size = new System.Drawing.Size(238, 23);
             this.tbtratu.TabIndex = 15;
-            // 
-            // btntratu
-            // 
-            this.btntratu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btntratu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntratu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btntratu.Location = new System.Drawing.Point(281, 39);
-            this.btntratu.Name = "btntratu";
-            this.btntratu.Size = new System.Drawing.Size(73, 32);
-            this.btntratu.TabIndex = 19;
-            this.btntratu.Text = "Tra từ";
-            this.btntratu.UseVisualStyleBackColor = false;
-            this.btntratu.Click += new System.EventHandler(this.btntratu_Click);
+            this.tbtratu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbtratu_MouseClick);
             // 
             // rdanhviet
             // 
@@ -112,6 +100,7 @@
             this.rdanhviet.TabStop = true;
             this.rdanhviet.Text = "Anh - Việt";
             this.rdanhviet.UseVisualStyleBackColor = true;
+            this.rdanhviet.CheckedChanged += new System.EventHandler(this.rdanhviet_CheckedChanged);
             this.rdanhviet.Click += new System.EventHandler(this.rdanhviet_Click);
             // 
             // rdvietanh
@@ -125,33 +114,8 @@
             this.rdvietanh.TabIndex = 23;
             this.rdvietanh.Text = "Việt - Anh";
             this.rdvietanh.UseVisualStyleBackColor = true;
+            this.rdvietanh.CheckedChanged += new System.EventHandler(this.rdvietanh_CheckedChanged);
             this.rdvietanh.Click += new System.EventHandler(this.rdvietanh_Click);
-            // 
-            // btnthemtuvung
-            // 
-            this.btnthemtuvung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnthemtuvung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthemtuvung.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnthemtuvung.Location = new System.Drawing.Point(475, 39);
-            this.btnthemtuvung.Name = "btnthemtuvung";
-            this.btnthemtuvung.Size = new System.Drawing.Size(124, 32);
-            this.btnthemtuvung.TabIndex = 26;
-            this.btnthemtuvung.Text = "Thêm từ vựng";
-            this.btnthemtuvung.UseVisualStyleBackColor = false;
-            this.btnthemtuvung.Click += new System.EventHandler(this.btnthemtuvung_Click);
-            // 
-            // btnnghe
-            // 
-            this.btnnghe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnnghe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnnghe.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnnghe.Location = new System.Drawing.Point(377, 39);
-            this.btnnghe.Name = "btnnghe";
-            this.btnnghe.Size = new System.Drawing.Size(75, 32);
-            this.btnnghe.TabIndex = 32;
-            this.btnnghe.Text = "Nghe";
-            this.btnnghe.UseVisualStyleBackColor = false;
-            this.btnnghe.Click += new System.EventHandler(this.btnnghe_Click);
             // 
             // dgvTD
             // 
@@ -176,14 +140,55 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(345, 132);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.Size = new System.Drawing.Size(90, 18);
             this.label1.TabIndex = 35;
             this.label1.Text = "Nghĩa của từ";
             // 
+            // btntratu
+            // 
+            this.btntratu.BackColor = System.Drawing.Color.White;
+            this.btntratu.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntratu.Image = global::Tudien.Properties.Resources.icons8_search_40__1_1;
+            this.btntratu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btntratu.Location = new System.Drawing.Point(284, 35);
+            this.btntratu.Name = "btntratu";
+            this.btntratu.Size = new System.Drawing.Size(87, 44);
+            this.btntratu.TabIndex = 19;
+            this.btntratu.UseVisualStyleBackColor = false;
+            this.btntratu.Click += new System.EventHandler(this.btntratu_Click);
+            // 
+            // btnnghe
+            // 
+            this.btnnghe.BackColor = System.Drawing.Color.White;
+            this.btnnghe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnghe.Image = global::Tudien.Properties.Resources.icons8_sound_40;
+            this.btnnghe.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnnghe.Location = new System.Drawing.Point(396, 35);
+            this.btnnghe.Name = "btnnghe";
+            this.btnnghe.Size = new System.Drawing.Size(81, 44);
+            this.btnnghe.TabIndex = 32;
+            this.btnnghe.UseVisualStyleBackColor = false;
+            this.btnnghe.Click += new System.EventHandler(this.btnnghe_Click);
+            // 
+            // btnthemtuvung
+            // 
+            this.btnthemtuvung.BackColor = System.Drawing.Color.White;
+            this.btnthemtuvung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnthemtuvung.Image = global::Tudien.Properties.Resources.icons8_synchronize_filled_40;
+            this.btnthemtuvung.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnthemtuvung.Location = new System.Drawing.Point(495, 35);
+            this.btnthemtuvung.Name = "btnthemtuvung";
+            this.btnthemtuvung.Size = new System.Drawing.Size(101, 44);
+            this.btnthemtuvung.TabIndex = 26;
+            this.btnthemtuvung.UseVisualStyleBackColor = false;
+            this.btnthemtuvung.Click += new System.EventHandler(this.btnthemtuvung_Click_1);
+            // 
             // fmain
             // 
+            this.AcceptButton = this.btntratu;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -223,8 +228,8 @@
         private System.Windows.Forms.Button btnthemtuvung;
         private System.Windows.Forms.Button btnnghe;
         private System.Windows.Forms.DataGridView dgvTD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tu;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tu;
     }
 }
 

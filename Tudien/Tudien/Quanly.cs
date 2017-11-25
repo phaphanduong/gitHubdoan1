@@ -15,7 +15,7 @@ namespace Tudien
 {
     public partial class Quanly : Form
     {
-
+        fmain fm = new fmain();
         // Chuỗi kết nối 
         string strConnectionString = "Data Source=DESKTOP-V8T7PFO;Initial Catalog=DA1;Integrated Security=True";
         public Quanly()
@@ -103,5 +103,12 @@ namespace Tudien
                 MessageBox.Show("Không sửa được, lỗi rồi!");
             }
         }
+
+        private void Quanly_Load(object sender, EventArgs e)
+        {
+            loaddata();
+        }
+
+
     }
 }

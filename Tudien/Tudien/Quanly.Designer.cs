@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnNhaplai = new System.Windows.Forms.Button();
+            this.btlamlai = new System.Windows.Forms.Button();
+            this.btxoa = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tbnghia = new System.Windows.Forms.TextBox();
+            this.btsua = new System.Windows.Forms.Button();
+            this.btthem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tbthemtu = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btlamlai = new System.Windows.Forms.Button();
-            this.btxoa = new System.Windows.Forms.Button();
-            this.btsua = new System.Windows.Forms.Button();
-            this.btthem = new System.Windows.Forms.Button();
-            this.btnNhaplai = new System.Windows.Forms.Button();
             this.Grvdata = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -64,6 +64,42 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // btnNhaplai
+            // 
+            this.btnNhaplai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnNhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhaplai.Location = new System.Drawing.Point(429, 95);
+            this.btnNhaplai.Name = "btnNhaplai";
+            this.btnNhaplai.Size = new System.Drawing.Size(80, 23);
+            this.btnNhaplai.TabIndex = 36;
+            this.btnNhaplai.Text = "Nhập Lại";
+            this.btnNhaplai.UseVisualStyleBackColor = false;
+            this.btnNhaplai.Click += new System.EventHandler(this.btnNhaplai_Click);
+            // 
+            // btlamlai
+            // 
+            this.btlamlai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btlamlai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btlamlai.Location = new System.Drawing.Point(431, 57);
+            this.btlamlai.Name = "btlamlai";
+            this.btlamlai.Size = new System.Drawing.Size(78, 23);
+            this.btlamlai.TabIndex = 3;
+            this.btlamlai.Text = "làm mới";
+            this.btlamlai.UseVisualStyleBackColor = false;
+            this.btlamlai.Click += new System.EventHandler(this.btlamlai_Click);
+            // 
+            // btxoa
+            // 
+            this.btxoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btxoa.Location = new System.Drawing.Point(331, 57);
+            this.btxoa.Name = "btxoa";
+            this.btxoa.Size = new System.Drawing.Size(78, 23);
+            this.btxoa.TabIndex = 2;
+            this.btxoa.Text = "Xóa";
+            this.btxoa.UseVisualStyleBackColor = false;
+            this.btxoa.Click += new System.EventHandler(this.btxoa_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -82,6 +118,30 @@
             this.tbnghia.Name = "tbnghia";
             this.tbnghia.Size = new System.Drawing.Size(209, 23);
             this.tbnghia.TabIndex = 33;
+            // 
+            // btsua
+            // 
+            this.btsua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btsua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btsua.Location = new System.Drawing.Point(431, 19);
+            this.btsua.Name = "btsua";
+            this.btsua.Size = new System.Drawing.Size(78, 23);
+            this.btsua.TabIndex = 1;
+            this.btsua.Text = "Sửa";
+            this.btsua.UseVisualStyleBackColor = false;
+            this.btsua.Click += new System.EventHandler(this.btsua_Click);
+            // 
+            // btthem
+            // 
+            this.btthem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btthem.Location = new System.Drawing.Point(331, 19);
+            this.btthem.Name = "btthem";
+            this.btthem.Size = new System.Drawing.Size(78, 23);
+            this.btthem.TabIndex = 0;
+            this.btthem.Text = "Thêm";
+            this.btthem.UseVisualStyleBackColor = false;
+            this.btthem.Click += new System.EventHandler(this.btthem_Click);
             // 
             // label1
             // 
@@ -112,66 +172,6 @@
             this.groupBox2.TabIndex = 38;
             this.groupBox2.TabStop = false;
             // 
-            // btlamlai
-            // 
-            this.btlamlai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btlamlai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btlamlai.Location = new System.Drawing.Point(431, 57);
-            this.btlamlai.Name = "btlamlai";
-            this.btlamlai.Size = new System.Drawing.Size(78, 23);
-            this.btlamlai.TabIndex = 3;
-            this.btlamlai.Text = "làm mới";
-            this.btlamlai.UseVisualStyleBackColor = false;
-            this.btlamlai.Click += new System.EventHandler(this.btlamlai_Click);
-            // 
-            // btxoa
-            // 
-            this.btxoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btxoa.Location = new System.Drawing.Point(331, 57);
-            this.btxoa.Name = "btxoa";
-            this.btxoa.Size = new System.Drawing.Size(78, 23);
-            this.btxoa.TabIndex = 2;
-            this.btxoa.Text = "Xóa";
-            this.btxoa.UseVisualStyleBackColor = false;
-            this.btxoa.Click += new System.EventHandler(this.btxoa_Click);
-            // 
-            // btsua
-            // 
-            this.btsua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btsua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btsua.Location = new System.Drawing.Point(431, 19);
-            this.btsua.Name = "btsua";
-            this.btsua.Size = new System.Drawing.Size(78, 23);
-            this.btsua.TabIndex = 1;
-            this.btsua.Text = "Sửa";
-            this.btsua.UseVisualStyleBackColor = false;
-            this.btsua.Click += new System.EventHandler(this.btsua_Click);
-            // 
-            // btthem
-            // 
-            this.btthem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btthem.Location = new System.Drawing.Point(331, 19);
-            this.btthem.Name = "btthem";
-            this.btthem.Size = new System.Drawing.Size(78, 23);
-            this.btthem.TabIndex = 0;
-            this.btthem.Text = "Thêm";
-            this.btthem.UseVisualStyleBackColor = false;
-            this.btthem.Click += new System.EventHandler(this.btthem_Click);
-            // 
-            // btnNhaplai
-            // 
-            this.btnNhaplai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnNhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhaplai.Location = new System.Drawing.Point(429, 95);
-            this.btnNhaplai.Name = "btnNhaplai";
-            this.btnNhaplai.Size = new System.Drawing.Size(80, 23);
-            this.btnNhaplai.TabIndex = 36;
-            this.btnNhaplai.Text = "Nhập Lại";
-            this.btnNhaplai.UseVisualStyleBackColor = false;
-            this.btnNhaplai.Click += new System.EventHandler(this.btnNhaplai_Click);
-            // 
             // Grvdata
             // 
             this.Grvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -191,6 +191,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Quanly";
             this.Text = "Quanly";
+            this.Load += new System.EventHandler(this.Quanly_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
