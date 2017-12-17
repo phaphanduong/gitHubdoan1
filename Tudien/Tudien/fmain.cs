@@ -20,7 +20,7 @@ namespace Tudien
     public partial class fmain : Form
     {
         // Chuỗi kết nối 
-            string strConnectionString = "Data Source=DESKTOP-V8T7PFO;Initial Catalog=DA1;Integrated Security=True";
+            string strConnectionString = "Data Source=DESKTOP-V8T7PFO;Initial Catalog=testDA;Integrated Security=True";
         // Đối tượng kết nối 
         SqlConnection conn = null;
         SqlDataAdapter daTD = null;
@@ -40,7 +40,7 @@ namespace Tudien
                 conn.Open();
                 //lấy dữ liệu từ bảng danh sách từ 
                 //tạo đối tượng SqlAdapter là cầu nối giữa dataset và datasource để thực hiện công việc như đọc hay cập nhật dữ liệu
-                daTD = new SqlDataAdapter("SELECT * FROM Tu ", conn);
+                daTD = new SqlDataAdapter("SELECT * FROM Tu order by Tu ASC", conn);
                 //// khởi tạo đối tượng datatable
                 dtTD = new DataTable();
                 dtTD.Clear();
@@ -121,10 +121,11 @@ namespace Tudien
                 buckets[targetBucket] = index;
 
             }
-
+   
         //hàm tìm nghĩa của phần tử
-            public int FindEntry(string keys)
-            {
+        public int FindEntry(string keys)
+        {
+           
                 if (keys == null)
                 {
                 MessageBox.Show("Bạn chưa nhập từ cần tìm");
@@ -239,7 +240,7 @@ namespace Tudien
                 MessageBox.Show(er.Message);
             }
         }
-
+      
         //sự kiện button tra từ dược click
         private void btntratu_Click(object sender, EventArgs e)
         {

@@ -11,7 +11,6 @@ D:\Tudien\Tudien\obj\Debug\Tudien.pdb
 C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\Tudien\Tudien\bin\Debug\Tudien.exe.config
 C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\Tudien\Tudien\bin\Debug\Tudien.exe
 C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\Tudien\Tudien\bin\Debug\Tudien.pdb
-C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\Tudien\Tudien\obj\Debug\Tudien.csprojResolveAssemblyReference.cache
 C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\Tudien\Tudien\obj\Debug\Tudien.fmain.resources
 C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\Tudien\Tudien\obj\Debug\Tudien.Properties.Resources.resources
 C:\Users\phan.DESKTOP-V8T7PFO\Documents\GitHub\gitHubdoan1\Tudien\Tudien\obj\Debug\Tudien.Quanly.resources

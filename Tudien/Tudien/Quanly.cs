@@ -17,7 +17,7 @@ namespace Tudien
     {
         fmain fm = new fmain();
         // Chuỗi kết nối 
-        string strConnectionString = "Data Source=DESKTOP-V8T7PFO;Initial Catalog=DA1;Integrated Security=True";
+        string strConnectionString = "Data Source=DESKTOP-V8T7PFO;Initial Catalog=testDA;Integrated Security=True";
         public Quanly()
         {
             InitializeComponent();
